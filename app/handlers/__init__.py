@@ -1,0 +1,41 @@
+"""Роутеры бота. Порядок важен: обработчик текста "по умолчанию"
+(telegram) подключается последним."""
+from app.handlers import (
+    admin,
+    dork,
+    email_search,
+    faces,
+    github,
+    ip_domain,
+    membership,
+    phone,
+    photo,
+    purchase,
+    router as smart_router,
+    telegram,
+    tiktok,
+    ton,
+    user,
+    username,
+    vk,
+)
+
+ROUTERS = (
+    membership.router,
+    admin.router,
+    user.router,
+    purchase.router,
+    dork.router,
+    email_search.router,
+    tiktok.router,
+    username.router,
+    phone.router,
+    ip_domain.router,
+    github.router,
+    vk.router,
+    ton.router,
+    telegram.router,
+    photo.router,
+    faces.router,
+    smart_router.router,
+)
